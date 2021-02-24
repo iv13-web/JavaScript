@@ -109,7 +109,7 @@ if (numMaxArray[0] > numMaxArray[1] && numMaxArray[0] > numMaxArray[2] && numMax
 let numAverageArray = [7, 4, 11, 3];
 let sum = (numAverageArray[0] + numAverageArray[1] + numAverageArray[2] + numAverageArray[3]);
 let sumAverage = (sum / numAverageArray.length)
-console.log(sumAverage);
+console.log("Среднее арифмитическое значение суммы всех чисел массива равняется ", sumAverage);
 
 // TASK 1 - C - НЕДОСТАТОЧНО АБСТРАКТНО, при замене значений не работает
 let numSqrArray = [7, 4, 11, 3];
@@ -132,7 +132,7 @@ if (numSqrArray[0] > x && numSqrArray[0] <= numSqrArray[1] && numSqrArray[0] <= 
   var y = (numSqrArray[3]);
 }
 let sqrNum = Math.sqrt(y)
-console.log(sqrNum) 
+console.log("Квадратный корень второго по величине числа равен ", sqrNum) 
 
 
 //TASK 1 - D
@@ -172,8 +172,8 @@ for (let i = 0; i < hugeArray.length; i++) {
     min = hugeArray[i];
   }
 } 
-console.log(max);
-console.log(min);
+console.log("Значение наибольшего числа массива равняется ",max);
+console.log("Значение наименьшего числа массива равняется ",min);
 
 // TASK 2 - B
 let sumTask2 = 0;
@@ -181,7 +181,7 @@ for (let i = 0; i < hugeArray.length; i++) {
   sumTask2 = sumTask2 + hugeArray[i];
 }
 let sumAverageTask2 = sumTask2 / hugeArray.length;
-console.log(sumAverageTask2)
+console.log("Среднее арифмитическое значение суммы всех чисел массива равняется ", sumAverageTask2)
 
 // TASK 2 - C
 let maximum = hugeArray[0];
@@ -191,4 +191,4 @@ for (let i = 0; i < hugeArray.length; i++) {
   }
 }
 let cube = Math.pow(maximum, 3);
-console.log (cube);
+console.log ("Значение самого большого числа массива в кубе равняется ", cube);
