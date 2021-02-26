@@ -51,10 +51,10 @@
 //     for (let i = 0; i < wineLabels.length; i++) {
 //       list.innerHTML = list.innerHTML + '<li>' + wineLabels[i] + '</li>';
 //     }
-  // console.log(wineLabels);
-  // list.innerHTML = '<li>' + wineLabels[0] + '</li>';
-  // list.innerHTML = list.innerHTML + '<li>' + wineLabels[1] + '</li>';
-  // list.innerHTML = list.innerHTML + '<li>' + wineLabels[2] + '</li>';
+//   console.log(wineLabels);
+//   list.innerHTML = '<li>' + wineLabels[0] + '</li>';
+//   list.innerHTML = list.innerHTML + '<li>' + wineLabels[1] + '</li>';
+//   list.innerHTML = list.innerHTML + '<li>' + wineLabels[2] + '</li>';
 
 
 // } else {
@@ -175,6 +175,7 @@ for (let i = 0; i < hugeArray.length; i++) {
 console.log("Значение наибольшего числа массива равняется ",max);
 console.log("Значение наименьшего числа массива равняется ",min);
 
+
 // TASK 2 - B
 let sumTask2 = 0;
 for (let i = 0; i < hugeArray.length; i++) {
@@ -192,3 +193,32 @@ for (let i = 0; i < hugeArray.length; i++) {
 }
 let cube = Math.pow(maximum, 3);
 console.log ("Значение самого большого числа массива в кубе равняется ", cube);
+
+// TASK 3
+
+let answer = prompt('Введите свою марку комбайна');
+
+let harvesters = {
+  id: 'list',
+  true : true,
+  false: false,
+  brands: ['Claas', 'JohnDeere', answer] // если массив пустой, то цикл не работает
+};
+
+// brands: ['Claas', 'JohnDeere', 'Bizon', 'Cat']
+
+console.log(harvesters.id)
+
+let list = document.getElementById(harvesters.id);
+
+for (let i = 0; i < harvesters.brands.length; i++) {
+  if (harvesters.brands.length > 2) {
+    list.innerHTML = list.innerHTML + '<li>' + harvesters.brands[i] + '</li>';
+  } else if (harvesters.brands.length <=  2 && harvesters.brands.length !=  0) {
+    alert('У нас есть комбайны ' + harvesters.brands[0] + ' и ' + harvesters.brands[1]);
+  } else if (harvesters.brands.length =  0) {      // рационально ли тут писать else if?
+    alert('Комбайнов нет ');
+  }
+}
+
+
