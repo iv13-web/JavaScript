@@ -196,29 +196,61 @@ console.log ("Значение самого большого числа масс
 
 // TASK 3
 
-let answer = prompt('Введите свою марку комбайна');
+// let answer = prompt('Введите свою марку комбайна');
 
 let harvesters = {
   id: 'list',
-  true : true,
-  false: false,
-  brands: ['Claas', 'JohnDeere', answer] // если массив пустой, то цикл не работает
+  isAvaliable: true,
+  // brands: ['Claas', 'JohnDeere', answer] // если массив пустой, то цикл не работает
+  brands: ['Claas', 'JohnDeere', 'Cat'] // если массив пустой, то цикл не работает
 };
 
 // brands: ['Claas', 'JohnDeere', 'Bizon', 'Cat']
-
 console.log(harvesters.id)
 
 let list = document.getElementById(harvesters.id);
 
 for (let i = 0; i < harvesters.brands.length; i++) {
   if (harvesters.brands.length > 2) {
-    list.innerHTML = list.innerHTML + '<li>' + harvesters.brands[i] + '</li>';
+    if (harvesters.isAvaliable === true) {
+      list.innerHTML = list.innerHTML + '<li>' + harvesters.brands[i] + '</li>';
+    }
   } else if (harvesters.brands.length <=  2 && harvesters.brands.length !=  0) {
     alert('У нас есть комбайны ' + harvesters.brands[0] + ' и ' + harvesters.brands[1]);
-  } else if (harvesters.brands.length =  0) {      // рационально ли тут писать else if?
-    alert('Комбайнов нет ');
   }
 }
 
+// if (harvesters.brands.length === 0) {      // рационально ли тут писать else if?
+//   alert('Комбайнов нет ');
+// }
+
+
+// let test = document.getElementsByClassName('test')[0];
+// let brands = document.querySelectorAll('.test');
+// for (let brand of brands) {
+//   brand.innerHTML = 'asdgasdg';
+// }
+
+// for (let i = 0; i < test.length; i++) {
+//   test[i].innerHTML = i + 1;
+// }
+
+
+// let table = document.querySelector('table');
+// for (let i = 0; i < 101; i++) {
+//   if ([i] > 0 && [i] % 10 === 0) {
+//     // после этого условия надо будет переходить на новую строку
+//   }
+// }
+
+let table = document.getElementById('table');
+console.log(table)
+let firstNum = 1;
+for (let row = 0; row < 10; row++) {
+  table.innerHTML = table.innerHTML + '<tr>';
+    for (let dataCell = 0; dataCell < 10; dataCell++) {
+    table.innerHTML = table.innerHTML + '<td>' + firstNum++ + '</td>';
+    } 
+  table.innerHTML = table.innerHTML + '</tr>';
+} 
 
