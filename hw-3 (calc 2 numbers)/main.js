@@ -21,8 +21,8 @@
 
 
 function calcSum() {
-  let a = parseInt(document.getElementById('numberA').value),
-      b = parseInt(document.getElementById('numberB').value),
+  let a = +(document.getElementById('numberA').value),
+      b = +(document.getElementById('numberB').value),
       result = a + b;
   console.log(result)
 }
