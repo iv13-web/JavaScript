@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<title>Document</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+		<h2 class="col-md-4">Калькулятор</h2>
+		</div>	
+		<div class="row">
+			<div class="col-md-3">
+				<p class="mb-1">Число 1</p>
+				<input class="form-control mb-3" type="text" id="calculationElement1" >
+				<p class="mb-1">Число 2</p>
+				<input class="form-control mb-3" type="text"  id="calculationElement2" >
+				<button type="button" class="btn btn-outline-secondary" onclick: onclick="calcSum(); resetInputValue(); addHistory()">+</button>
+				<button type="button" class="btn btn-outline-secondary" onclick: onclick="calcSubtraction(); resetInputValue(); addHistory()">-</button>
+				<button type="button" class="btn btn-outline-secondary" onclick: onclick="calcMultiplication(); resetInputValue(); addHistory()">x</button>
+				<button type="button" class="btn btn-outline-secondary" onclick: onclick="calcDivision(); resetInputValue(); addHistory()">/</button>
+			</div>
+			<div class="col-md-2"  id="resultArea">
+				<p class="mb-1">Результат:</p>
+			</div>
+			<div class="col-md-3"  id="historytArea">
+				<p class="mb-1">История:</p>
+			</div>
+		</div>
+	</div>	
+</div>
+
+	<script src="main.js"></script>
+</body>
+</html>

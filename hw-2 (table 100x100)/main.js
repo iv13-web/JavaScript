@@ -52,27 +52,13 @@ for (i = 0; i < 7; i++){
   for (j = increaser; j < increaser + 7; j++) {
     singleRow += '<td>' + (j + 1) + '</td>';
   }
-  
+
   increaser += 7;
   fullTable += '<tr>' + singleRow + '</tr>';
-  // console.log(fullTable);
 }  
 
 // console.log(fullTable);
 table3.innerHTML = fullTable;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

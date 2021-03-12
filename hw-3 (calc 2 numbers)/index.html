@@ -3,20 +3,70 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<title>Document</title>
 </head>
 <body>
-	<h1>Сложение двух чисел</h1>
-	<p>Число А</p>
-	<input type="text" id="numberA">
-	<br>
-	<p>Число Б</p>
-	<input type="text" id="numberB">
-	<br>
-	<br>
-	<button onClick="calcSum()">сложи нас</button>
-	
 
+	<div class="container">
+		<div class="row justify-content-aroud">
+			<h2 class="col-md-4">Сложение двух чисел</h2>
+			<h2 class="col-md-4">Вычитание двух чисел</h2>
+		</div>	
+		<div class="row justify-content-aroud">
+			<div class="col-md-2">
+				<p class="mb-1">Число 1</p>
+				<input class="form-control mb-3" type="text" id="sumElement1">
+				<p class="mb-1">Число 2</p>
+				<input class="form-control mb-3" type="text" id="sumElement2">
+				<button type="button" class="btn btn-outline-secondary" onClick="calcSum()">сложи нас</button>
+			</div>
+			<div class="col-md-2 col-md-offset-1" id="calcSum">
+				<p class="mb-1">Результат:</p>
+			</div>
+			
+			<div class="col-md-2">
+				<p class="mb-1">Число 1</p>
+				<input class="form-control mb-3" type="text" id="subtractionElement1">
+				<p class="mb-1">Число 2</p>
+				<input class="form-control mb-3" type="text" id="subtractionElement2">
+				<button type="button" class="btn btn-outline-secondary" onClick="calcSubtraction()">вычти нас</button>
+			</div>
+			<div class="col-md-2 col-md-offset-1" id="calcSubtraction">
+				<p class="mb-1">Результат:</p>
+			</div>
+		</div>
+
+
+		
+		<div class="row justify-content-aroud">
+			<h2 class="col-md-4 mt-5">Деление двух чисел</h2>
+			<h2 class="col-md-4 mt-5">Умножение двух чисел</h2>
+		</div>	
+		<div class="row justify-content-aroud">
+			<div class="col-md-2">
+				<p class="mb-1">Число 1</p>
+				<input class="form-control mb-3" type="text" id="divisionElement1">
+				<p class="mb-1">Число 2</p>
+				<input class="form-control mb-3" type="text" id="divisionElement2">
+				<button type="button" class="btn btn-outline-secondary" onClick="calcDivision()">раздели нас</button>
+			</div>
+			<div class="col-md-2 col-md-offset-1" id="calcDivision">
+				<p class="mb-1">Результат:</p>
+			</div>
+		
+			<div class="col-md-2">
+				<p class="mb-1">Число 1</p>
+				<input class="form-control mb-3" type="text" id="multElement1">
+				<p class="mb-1">Число 2</p>
+				<input class="form-control mb-3" type="text" id="multElement2">
+				<button type="button" class="btn btn-outline-secondary" onClick="calcMultiplication()">умножь нас</button>
+			</div>
+			<div class="col-md-2 col-md-offset-1" id="calcMultiplication">
+				<p class="mb-1">Результат:</p>
+			</div>
+		</div>		
+	</div>	
 
 	<script src="main.js"></script>
 </body>
